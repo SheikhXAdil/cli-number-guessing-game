@@ -23,7 +23,7 @@ const answerCheck = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
 const welcome = async () => {
     console.clear()
     const rainbowTitle = chalkAnimation.rainbow(
-        'Welcom to the numder guess \n'
+        'Welcome to the numder guess \n'
     );
 
     await sleep();
@@ -32,7 +32,7 @@ const welcome = async () => {
     console.log(`
     ${chalk.bgBlue('HOW TO PLAY')} 
     I am a process on your computer.
-    I wil generate a random number aaccording to the dificulty u select.
+    I will generate a random number according to the difficulty u select.
     U will get ${chalk.cyan(`${tries} tries`)} to guess the number.
     Reach the number as soon as possible.
   `);
@@ -145,19 +145,19 @@ const winner = async () => {
             return;
         }
         if (data) {
-            console.log("\n", gradient.cristal.multiline(data))
+            console.log("\n", gradient.pastel.multiline(data))
         }
     })
 
     await sleep()
     console.log(gradient.fruit(`\n You earned ${score} points`))
-    console.log(chalk.greenBright("\n You have guessed the correct number 👌🎉"))
+    console.log(chalk.greenBright("\n You have guessed the correct number"))
     process.exit(0)
 }
 
 const loser = () => {
     console.clear()
-    console.log(chalk.bgRed("\n Better luck next time buddy 👍"))
+    console.log(chalk.bgRed("\n Better luck next time buddy"))
     process.exit(0)
 }
 
